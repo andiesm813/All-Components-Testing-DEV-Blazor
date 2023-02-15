@@ -1,0 +1,347 @@
+@page "/"
+@inject Northwind.INorthwindService northwindService
+
+<div class="row-layout view-1-container">
+    <div class="column-layout group">
+        <div class="row-layout group_1">
+            <IgbCard Outlined="true" class="card" view-1-scope>
+                <IgbCardMedia class="media-content" view-1-scope>
+                    <img src="https://images.unsplash.com/photo-1503259901638-6bf44a4cd670?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fGNvbG9yZnVsJTIwYWJzdHJhY3QlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="image" />
+                </IgbCardMedia>
+                <IgbCardHeader>
+                    <h3 slot="title">
+                        Title goes here...
+                    </h3>
+                    <h5 slot="subtitle">
+                        Subtitle goes here...
+                    </h5>
+                </IgbCardHeader>
+                <IgbCardContent class="body-content" view-1-scope>
+                    <p class="typography__body-1 content">
+                        Body 1
+                    </p>
+                </IgbCardContent>
+                <IgbCardActions class="actions-content" view-1-scope>
+                    <IgbButton Variant="ButtonVariant.Flat" class="user-input" view-1-scope>
+                        Button
+                        <IgbRipple></IgbRipple>
+                    </IgbButton>
+                    <IgbIconButton Variant="IconButtonVariant.Flat">
+                        <span class="material-icons">
+                            favorite
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbIconButton>
+                    <IgbIconButton Variant="IconButtonVariant.Flat">
+                        <span class="material-icons">
+                            bookmark
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbIconButton>
+                    <IgbIconButton Variant="IconButtonVariant.Flat">
+                        <span class="material-icons">
+                            share
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbIconButton>
+                </IgbCardActions>
+            </IgbCard>
+            <div class="column-layout group_2">
+                <IgbExpansionPanel Open="true" class="expansion-panel" view-1-scope>
+                    <p class="typography__body-1 content">
+                        Body 1
+                    </p>
+                    <span slot="title">Title goes here...</span>
+                    <span slot="subtitle">Subtitle goes here...</span>
+                </IgbExpansionPanel>
+                <IgbGrid Data="northwindEmployees" PrimaryKey="EmployeeID" DisplayDensity="DisplayDensity.Cosy" AllowFiltering="true" FilterMode="FilterMode.ExcelStyleFilter" AutoGenerate="false" class="ig-typography grid" view-1-scope>
+                    <IgbColumn Field="LastName" DataType="GridColumnDataType.String" Header="lastName" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="EmployeeID" DataType="GridColumnDataType.Number" Header="employeeID" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="FirstName" DataType="GridColumnDataType.String" Header="firstName" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="Title" DataType="GridColumnDataType.String" Header="title" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="TitleOfCourtesy" DataType="GridColumnDataType.String" Header="titleOfCourtesy" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="BirthDate" DataType="GridColumnDataType.Date" Header="birthDate" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="HireDate" DataType="GridColumnDataType.Date" Header="hireDate" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="Address.Street" DataType="GridColumnDataType.String" Header="address street" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="Address.City" DataType="GridColumnDataType.String" Header="address city" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="Address.Region" DataType="GridColumnDataType.String" Header="address region" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="Address.PostalCode" DataType="GridColumnDataType.String" Header="address postalCode" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="Address.Country" DataType="GridColumnDataType.String" Header="address country" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="Address.Phone" DataType="GridColumnDataType.String" Header="address phone" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="ManagerID" DataType="GridColumnDataType.Number" Header="managerID" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="Notes" DataType="GridColumnDataType.String" Header="notes" Sortable="true" Selectable="false"></IgbColumn>
+                    <IgbColumn Field="AvatarUrl" DataType="GridColumnDataType.String" Header="avatarUrl" Sortable="true" Selectable="false"></IgbColumn>
+                </IgbGrid>
+            </div>
+            <IgbTree class="tree" view-1-scope>
+                <IgbTreeItem Label="Design" Expanded="true">
+                    <IgbTreeItem Label="Figma" Expanded="true"></IgbTreeItem>
+                    <IgbTreeItem Label="Adobe XD" Expanded="true"></IgbTreeItem>
+                    <IgbTreeItem Label="Sketch" Expanded="true"></IgbTreeItem>
+                </IgbTreeItem>
+                <IgbTreeItem Label="Development" Expanded="true">
+                    <IgbTreeItem Label="Angular" Expanded="true"></IgbTreeItem>
+                    <IgbTreeItem Label="Blazor" Expanded="true"></IgbTreeItem>
+                    <IgbTreeItem Label="Web components" Expanded="true"></IgbTreeItem>
+                </IgbTreeItem>
+            </IgbTree>
+            <div class="column-layout group_3">
+                <div class="row-layout group_4">
+                    <IgbButton class="button_1" view-1-scope>
+                        Button
+                        <IgbRipple></IgbRipple>
+                    </IgbButton>
+                    <IgbButton Variant="ButtonVariant.Outlined" class="button_1" view-1-scope>
+                        Button
+                        <IgbRipple></IgbRipple>
+                    </IgbButton>
+                    <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => _dropdown!.ToggleAsync(_button))" @ref="_button" class="button_1" view-1-scope>
+                        <span>Button</span>
+                        <span class="material-icons">
+                            add
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbButton>
+                    <IgbButton Variant="ButtonVariant.Fab" class="user-input_1" view-1-scope>
+                        <span class="material-icons">
+                            add
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbButton>
+                    <IgbIconButton Variant="IconButtonVariant.Flat">
+                        <span class="material-icons">
+                            email
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbIconButton>
+                    <IgbAvatar Shape="AvatarShape.Circle" class="avatar" view-1-scope>
+                        <span class="material-icons">people</span>
+                    </IgbAvatar>
+                    <IgbChip Size="SizableComponentSize.Large" class="chip" view-1-scope>
+                        <span slot="prefix">
+                            <span class="material-icons icon">
+                                place
+                            </span>
+                        </span>
+                        Country
+                    </IgbChip>
+                    <span class="material-icons icon_1">
+                        mail
+                    </span>
+                    <IgbDropdown @ref="_dropdown" class="dropdown" view-1-scope>
+                        <IgbDropdownItem>
+                            Option
+                        </IgbDropdownItem>
+                    </IgbDropdown>
+                </div>
+                <span class="user-input">ButtonGroup not yet available in Blazor</span>
+                <div class="row-layout group_5">
+                    <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="user-input_1" view-1-scope>
+                        Label
+                    </IgbCheckbox>
+                    <IgbSwitch class="user-input_1" view-1-scope>
+                        Label
+                    </IgbSwitch>
+                </div>
+                <IgbRadioGroup class="user-input_1" view-1-scope>
+                    <IgbRadio class="radio" view-1-scope>
+                        Label
+                    </IgbRadio>
+                    <IgbRadio class="radio" view-1-scope>
+                        Label
+                    </IgbRadio>
+                    <IgbRadio class="radio" view-1-scope>
+                        Label
+                    </IgbRadio>
+                </IgbRadioGroup>
+                <IgbRating Size="SizableComponentSize.Large" class="user-input_1" view-1-scope></IgbRating>
+                <IgbSlider Value="0" Min="0" Max="100" Step="10" DiscreteTrack="true" class="slider" view-1-scope></IgbSlider>
+            </div>
+            <IgbList class="list" view-1-scope>
+                <IgbListItem>
+                    <div slot="start">
+                        <IgbAvatar Shape="AvatarShape.Circle" class="avatar" view-1-scope>
+                            <span class="material-icons">person</span>
+                        </IgbAvatar>
+                    </div>
+                    <div slot="title">Title goes here</div>
+                    <div slot="subtitle">Subtitle...</div>
+                    <div slot="end">
+                        <span class="material-icons icon_1">
+                            star
+                        </span>
+                    </div>
+                </IgbListItem>
+                <IgbListItem>
+                    <div slot="start">
+                        <IgbAvatar Shape="AvatarShape.Circle" class="avatar" view-1-scope>
+                            <span class="material-icons">person</span>
+                        </IgbAvatar>
+                    </div>
+                    <div slot="title">Title goes here</div>
+                    <div slot="subtitle">Subtitle...</div>
+                    <div slot="end">
+                        <span class="material-icons icon_1">
+                            star
+                        </span>
+                    </div>
+                </IgbListItem>
+                <IgbListItem>
+                    <div slot="start">
+                        <IgbAvatar Shape="AvatarShape.Circle" class="avatar" view-1-scope>
+                            <span class="material-icons">person</span>
+                        </IgbAvatar>
+                    </div>
+                    <div slot="title">Title goes here</div>
+                    <div slot="subtitle">Subtitle...</div>
+                    <div slot="end">
+                        <span class="material-icons icon_1">
+                            star
+                        </span>
+                    </div>
+                </IgbListItem>
+                <IgbListItem>
+                    <div slot="start">
+                        <IgbAvatar Shape="AvatarShape.Circle" class="avatar" view-1-scope>
+                            <span class="material-icons">person</span>
+                        </IgbAvatar>
+                    </div>
+                    <div slot="title">Title goes here</div>
+                    <div slot="subtitle">Subtitle...</div>
+                    <div slot="end">
+                        <span class="material-icons icon_1">
+                            star
+                        </span>
+                    </div>
+                </IgbListItem>
+                <IgbListItem>
+                    <div slot="start">
+                        <IgbAvatar Shape="AvatarShape.Circle" class="avatar" view-1-scope>
+                            <span class="material-icons">person</span>
+                        </IgbAvatar>
+                    </div>
+                    <div slot="title">Title goes here</div>
+                    <div slot="subtitle">Subtitle...</div>
+                    <div slot="end">
+                        <span class="material-icons icon_1">
+                            star
+                        </span>
+                    </div>
+                </IgbListItem>
+                <IgbListItem>
+                    <div slot="start">
+                        <IgbAvatar Shape="AvatarShape.Circle" class="avatar" view-1-scope>
+                            <span class="material-icons">person</span>
+                        </IgbAvatar>
+                    </div>
+                    <div slot="title">Title goes here</div>
+                    <div slot="subtitle">Subtitle...</div>
+                    <div slot="end">
+                        <span class="material-icons icon_1">
+                            star
+                        </span>
+                    </div>
+                </IgbListItem>
+            </IgbList>
+            <div class="column-layout group_6">
+                <span class="user-input">Combo not yet available in Blazor</span>
+                <IgbDatePicker Label="Date" class="date-picker" view-1-scope></IgbDatePicker>
+                <IgbInput Label="Label/Placeholder" Outlined="true" class="user-input" view-1-scope></IgbInput>
+                <span class="user-input">Select not yet available in Blazor</span>
+                <span class="textarea">Textarea not yet available in Blazor</span>
+            </div>
+        </div>
+        <div class="row-layout group_7">
+            <IgbTabs class="tabs" view-1-scope>
+                <IgbTab Selected="true">
+                    <span class="material-icons">info</span>
+                    Label
+                </IgbTab>
+                <IgbTabPanel class="row-layout tab-item-content" view-1-scope>
+                    <img src="https://images.unsplash.com/photo-1503259901638-6bf44a4cd670?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fGNvbG9yZnVsJTIwYWJzdHJhY3QlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="image_1" />
+                </IgbTabPanel>
+                <IgbTab>
+                    <span class="material-icons">info</span>
+                    Label
+                </IgbTab>
+                <IgbTabPanel class="row-layout tab-item-content" view-1-scope></IgbTabPanel>
+            </IgbTabs>
+            <IgbAccordion SingleExpand="false" class="accordion" view-1-scope>
+                <IgbExpansionPanel>
+                    <p class="typography__body-1 content">
+                        Body 1
+                    </p>
+                    <span slot="title">Title goes here...</span>
+                </IgbExpansionPanel>
+                <IgbExpansionPanel>
+                    <p class="typography__body-1 content">
+                        Body 1
+                    </p>
+                    <span slot="title">Title goes here...</span>
+                </IgbExpansionPanel>
+                <IgbExpansionPanel>
+                    <p class="typography__body-1 content">
+                        Body 1
+                    </p>
+                    <span slot="title">Title goes here...</span>
+                </IgbExpansionPanel>
+            </IgbAccordion>
+            <IgbCalendar HideHeader="false" class="calendar" view-1-scope></IgbCalendar>
+            <div class="column-layout group_8">
+                <h1 class="content">
+                    Heading
+                </h1>
+                <h2 class="content">
+                    Heading
+                </h2>
+                <h3 class="content">
+                    Heading
+                </h3>
+                <h4 class="content">
+                    Heading
+                </h4>
+                <h5 class="content">
+                    Heading
+                </h5>
+                <h6 class="content">
+                    Heading
+                </h6>
+                <p class="typography__subtitle-1 content">
+                    Heading
+                </p>
+                <p class="typography__subtitle-2 content">
+                    Heading
+                </p>
+                <p class="typography__body-1 content">
+                    Body 1
+                </p>
+                <p class="typography__body-2 content">
+                    Body 1
+                </p>
+                <p class="typography__caption content">
+                    Body 1
+                </p>
+                <p class="typography__overline content">
+                    Body 1
+                </p>
+                <a class="typography__body-2 content">
+                    This is a link
+                </a>
+                <a class="typography__body-1 content">
+                    This is a link
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<Northwind.EmployeesType> northwindEmployees = new();
+    private IgbButton? _button;
+    private IgbDropdown? _dropdown;
+
+    protected override async Task OnInitializedAsync()
+    {
+        northwindEmployees = await this.northwindService.GetEmployees() ?? northwindEmployees;
+    }
+}
